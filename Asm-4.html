@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="build/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://kenwheeler.github.io/slick/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="./animate.css">
+    <script src="./wow.min.js"></script>
+</head>
+<style>
+    .background-image1 {
+        background-image:  url(./images/hero_1.jpg);
+        
+    }
+    .background-image2 {
+        background-image:  url(./images/hero_2.jpg);
+    }
+    .background-image3 {
+        background-image:  url(./images/hero_3.jpg);
+    }
+    .image {
+        background-image: url(./images/img_1.jpg);
+    }
+    .yoga-pricing {
+        background-image:  url(./images/img_1.jpg);
+        background-position: center center;
+    }
+    
+    .img1 {
+        position: relative;
+        width: 90%;
+        height: auto;
+    }
+    .img2 {
+        position: absolute;
+        width: 50%;
+        right: -60px;
+        border: 7px solid #fff;
+        bottom: -50px;
+    }
+    .play {
+        position: absolute;
+        top: 37%;
+        left: 47%;
+        
+    }
+    /* .events {
+        width: 1380px;
+    }
+    .yoga-trainer {
+        width: 1000px;
+    }
+    .yoga-features {
+        width: 1100px;
+    }
+    .contact {
+        width: 1400px;
+    } */
+    .searchBtn {
+        margin-top: 6px;
+    }
+    .sticky {
+        background-color: #38B2AC;
+        transition: 0.5s;
+    }
+    
+</style>
+
+<body>
+
+    <div id="navbar" class=" mx-auto hidden md:flex justify-between fixed top-0 left-0 right-0 px-8 xl:px-32 py-2 z-50 wow fadeInDownBig">
+        <a class="" style="font-family: Playfair Display" href=""><h1 class="text-4xl text-white  ">YogaLife</h1></a>
+        <div class="searchBtn ml-4 hidden lg:block">
+            <form class=" outline-none pl-4 py-2 inline-flex bg-white rounded-full " id="demo-search">
+                <svg class="text-black w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="search" placeholder="Search" class="px-3 rounded-full placeholder-gray-400 outline-none animation duration-500 ease-in-out w-32 focus:w-48 ">
+            </form> 
+        </div>
+        <div class="flex items-center">
+            <nav>
+                <ul class="hidden md:flex">
+                    <li><a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-semibold text-gray-400 hover:text-gray-200" href="./Asm.html">Home</a></li>
+                    <li class=" yogaClasses relative group">
+                        <a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-semibold text-gray-400 hover:text-gray-200" href="./Asm-1.html">Yoga Classes <i class="fas fa-angle-down"></i></a>
+                        <ul class="absolute bg-black text-white shadow py-2 px-4 rounded-md w-full hidden group-hover:block mt-2 py-4 ml-4 leading-10">
+                            <li class="hover:text-teal-400"><a href="#">Yoga Dance</a></li>
+                            <li class="hover:text-teal-400"><a href="#">Bare Workout</a></li>
+                            <li class="hover:text-teal-400"><a href="#">Peace Of Mine</a></li>
+                            <li class="hover:text-teal-400 relative group">
+                                <a href="#">More</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-semibold text-gray-400 hover:text-gray-200" href="./Asm-2.html">Events</a></li>
+                    <li><a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-semibold text-gray-400 hover:text-gray-200" href="./Asm-3.html">About</a></li>
+                    <li><a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-bold     text-white hover:text-gray-200" href="./Asm-4.html">Contact</a>  </li>
+                </ul>
+            </nav>
+        </div>  
+    </div>
+    
+    <div id="navbar2" class=" md:hidden fixed top-0 left-0 right-0 px-6 py-1 z-50">
+        <div  class="flex justify-between md:hidden ">
+            <a style="font-family: Playfair Display" href=""><h1 class="text-2xl md:text-4xl text-white  ">YogaLife</h1></a>
+            <button id="btnMobile"><i class="fas fa-bars px-5 text-white"></i></button>
+        </div>
+        <nav class="mt-2">
+            <ul class="hidden " id="mainMenu" >
+                <li><a class="pl-4 text-sm font-semibold text-gray-400 hover:text-gray-200" href="./Asm.html">Home</a></li>
+                <li><a class="pl-4 text-sm font-semibold text-gray-400 hover:text-gray-200" href="./Asm-1.html">Yoga Classes</a></li>
+                <li><a class="pl-4 text-sm font-semibold text-gray-400 hover:text-gray-200" href="./Asm-2.html">Events</a></li>
+                <li><a class="pl-4 text-sm font-semibold text-gray-400 hover:text-gray-200" href="./Asm-3.html">About</a></li>
+                <li><a class="pl-4 text-sm font-bold     text-white hover:text-gray-200" href="./Asm-4.html">Contact</a>  </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- navbarMobile -->
+
+    <header class="overflow-hidden">
+        <div class="relative">
+            <div class="background-image3 bg-no-repeat bg-cover bg-center w-screen h-screen inset-0">
+                <div class="mx-auto relative z-10">
+                    <div class="  text-center py-64 wow fadeIn">
+                        <p class="uppercase text-base text-white md:pt-16 pb-4" style="font-family: inherit;">GET IN TOUCH</p>
+                        <p class="text-5xl md:text-6xl text-white font-bold" style="font-family: Playfair Display"; >Contact Us</p>
+                    </div>
+                    <div class="py-32"></div>
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+    </header>
+    <!-- end header -->
+    <section class="contact mx-auto overflow-hidden">
+        <div class="py-6 md:py-10 lg:py-12 xl:py-16">
+            <div class="overflow-hidden md:w-5/6 mx-auto">
+                <div class=" wow bounceInUp">
+                    <div class="text-center">
+                        <h2 class=" inline-block font-semibold text-3xl md:text-4xl lg:text-4xl  ">Contact Information</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 gap-y-4 mx-4 md:mx-0 mt-4 md:mt-8 lg:mt-10 xl:mt-12 italic ">
+                        <div class=" bg-gray-200 text-center py-2">
+                            <p class="text-base md:text-lg"><span class="font-semibold">Address:</span> 198 West 21th Street, <br> Suite 721
+                                New York <br> NY 20016</p>
+                        </div>
+                        <div class=" flex items-center bg-gray-200 text-center py-2 ">
+                            <p class="text-base md:text-lg mx-auto"><span class="font-semibold">Phone:</span> <span class="text-teal-500">+ 1235
+                                    2355 98</span></p>  
+                        </div>
+                        <div class="flex items-center bg-gray-200 text-center py-2 ">
+                            <p class="text-base md:text-lg mx-auto"><span class="font-semibold">Email:</span> <a href=""><span
+                                        class="text-teal-400 hover:text-teal-300"> info@yoursite.com</span></a></p>
+                        </div>
+                        <div class="flex items-center bg-gray-200 text-center py-2 ">
+                            <p class="text-base md:text-lg mx-auto"><span class="font-semibold">Website:</span> <a href=""><span
+                                        class="text-teal-400 hover:text-teal-300"> yoursite.com</span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- contact information -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 bg-gray-200 mt-6 md:mt-8 lg:mt-12 xl:mt-16 ">
+                <div class="wow fadeInLeftBig ">
+                    <!-- <iframe class="w-full h-72 md:h-96 lg:h-full "
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99370.54990694014!2d-77.08461559239272!3d38.8935755299332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2zTmjDoCBUcuG6r25n!5e0!3m2!1svi!2s!4v1602395555373!5m2!1svi!2s"
+                        frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0">
+                    </iframe>  -->
+                    <iframe class="w-full h-72 md:h-96 lg:h-full "
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15781.112667867656!2d105.7488651232841!3d21.038816283067334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2sFPT%20Polytechnic%20Hanoi!5e0!3m2!1sen!2s!4v1603459943089!5m2!1sen!2s"frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
+                    <!-- <div class="relative overflow-hidden pb-16/9">
+                        <iframe class="absolute inset-0 w-full h-full "
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99370.54990694014!2d-77.08461559239272!3d38.8935755299332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2zTmjDoCBUcuG6r25n!5e0!3m2!1svi!2s!4v1602395555373!5m2!1svi!2s"
+                            frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div> -->
+                </div>
+                <!-- map -->
+                <div class="wow fadeInRightBig">
+                    <h2 class="font-semibold text-2xl lg:text-3xl text-center lg:text-left lg:pl-16 xl:pl-24 pt-2 md:pt-4 lg:pt-6">Contact Form</h2>
+                    <div class="validateForm pb-5 md:pb-6 lg:pb-8 xl:pb-10">
+                        <form action="">
+                            <div class="form text-center lg:text-left lg:pl-16 xl:pl-24">
+                                <div class="name mt-3">
+                                    <span class="tittle text-lg md:text-xl font-semibold text-gray-700">Full Name *</span><br>
+                                    <input type="text" id="inputName" class="inputName text-sm md:text-base w-1/2 lg:w-3/4 xl:w-2/3 px-3 py-2 rounded-md mt-1"
+                                        placeholder="Your Full Name..." value="" required><br>
+                                    <div id="errorName" class="error text-red-600 italic"></div>
+                                </div>
+                                <!--end name-->
+                                <div class="email mt-6">
+                                    <span class="tittle text-lg md:text-xl font-semibold text-gray-700">Your Email *</span><br>
+                                    <input type="email" id="inputEmail"
+                                        class="inputEmail text-sm md:text-base w-1/2 lg:w-3/4 xl:w-2/3 px-3 py-2 rounded-md mt-1" placeholder="Email Address..."
+                                        value="" required><br>
+                                    <div id="errorEmail" class="error text-red-600 italic"></div>
+                                </div>
+                                <!--end email-->
+                                <div class="phone mt-6">
+                                    <span class="tittle text-lg md:text-xl font-semibold text-gray-700">Phone *</span><br>
+                                    <input type="text" id="inputPhoneNumber"
+                                        class="inputPhone text-sm md:text-base w-1/2 lg:w-3/4 xl:w-2/3 px-3 py-2 rounded-md mt-1" placeholder="PhoneNumber #..."
+                                        value="" required pattern="(09|01[2|6|8|9])+([0-9]{8})\b"
+                                        title="Nhập sai định dạng"><br>
+                                    <div id="errorPhoneNumber" class="error text-red-600 italic"></div>
+                                </div>
+                                <!--end phone-->
+                                <div class="message mt-6">
+                                    <span class="tittle text-lg md:text-xl font-semibold text-gray-700">Message</span><br>
+                                    <textarea class="text-sm md:text-base    w-1/2 lg:w-3/4 xl:w-2/3 mt-2 px-3 py-2" name="" id="inputMessage"
+                                        placeholder="Say Hello to us..." cols="30" rows="5" maxlength="200"></textarea>
+                                    <div id="errorMessage" class="error text-red-600 italic"></div>
+                                </div>
+                                <!--end message-->
+                                <div class="submit-btn mt-6">
+                                    <button class="rounded-full text-white px-5 py-3 bg-teal-400 hover:bg-teal-500 transition duration-300 ease-in-out transform hover:scale-110"
+                                        id="sendMessage">Send Message</button>
+                                </div>
+                                <!--end submit-btn-->
+                            </div>
+                        </form>
+                    </div>
+                    <!--end form-->
+                </div>
+                <!-- form -->
+            </div>
+            <!-- map & form -->
+        </div>
+    </section>
+    <div class="bg-gray-100">
+        <section class="container mx-auto pb-6 md:pb-10 lg:pb-12 xl:pb-16">
+            <div class="wow fadeInUpBig">
+                <div class="text-center pt-6 md:pt-8 lg:pt-12 xl:pt-16 pb-2 md:pb-4 lg:pb-6">
+                    <h2 class=" inline-block font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl border-b-2 border-black ">Yoga Features</h2>
+                </div>
+                <div class=" yoga-features grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-4 md:pt-8 lg:pt-12 xl:pt-16 mx-auto w-3/4">
+                    <div>
+                        <div class="text-center">
+                            <span><i class="fas fa-dove text-teal-400 text-6xl"></i></span>
+                            <h4 class="text-xl md:text-2xl font-semibold pb-2 md:pb-4 pt-2 md:pt-6">Peace of Mind</h4>
+                            <p class="text-base md:text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus</p>
+                        </div>
+                    </div>
+                    <!-- cols1 -->
+                    <div class="">
+                        <div class="text-center">
+                            <span><i class="fas fa-spa text-teal-400 text-6xl"></i></span>
+                            <h4 class="text-xl md:text-2xl font-semibold pb-2 md:pb-4 pt-2 md:pt-6">Mindfullness</h4>
+                            <p class="text-base md:text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus</p>
+                        </div>
+                    </div>
+                    <!-- cols2 -->
+                    <div>
+                        <div class="text-center ">
+                            <span><i class="fas fa-walking text-teal-400 text-6xl"></i></span>
+                            <h4 class="text-xl md:text-2xl font-semibold pb-2 md:pb-4 pt-2 md:pt-6">Meditation</h4>
+                            <p class="text-base md:text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus</p>
+                        </div>
+                    </div>
+                    <!-- cols3 -->
+                    <div>
+                        <div class="text-center">
+                            <span><i class="fas fa-book-open text-teal-400 text-6xl"></i></span>
+                            <h4 class="text-xl md:text-2xl font-semibold pb-2 md:pb-4 pt-2 md:pt-6">Yoga Carpet</h4>
+                            <p class="text-base md:text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus</p>
+                        </div>
+                    </div>
+                    <!-- cols4 -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="bg-gray-800 wow pulse">
+        <section class="container mx-auto w-11/12 lg:w-5/6 ">
+            <div class="grid grid-cols-2 md:grid-cols-4 md:pt-8 lg:pt-10 xl:pt-12 gap-6 md:gap-8 lg:gap-10 lg:gap-12">
+                <div class="pt-6 md:pt-0 ">
+                    <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold">About</h2>
+                    <p class="text-sm text-gray-500 pr-4 xl:pr-12 pt-3 md:pt-5 pb-3 md:pb-4 leading-6">Lorem ipsum dolor <br class="hidden md:block lg:hidden"> sit amet, consectetur adipisicing elit. <br class="hidden xl:block"> Repellat quos rem ullam, <br class="hidden xl:block"> placeat amet.</p>
+                    <button class="text-white bg-teal-400 px-3 md:px-4 lg:px-6 py-2  rounded-full hover:bg-teal-500 transition duration-500 ease-in-out transform hover:scale-110 ">Read More</button>
+                    <div class="mt-3 md:mt-4 lg:mt-6">
+                        <form class=" outline-none pl-4 py-2 inline-flex bg-white rounded-full " id="demo-search">
+                            <svg class="text-black w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                            <input type="search" placeholder="Search" class="px-2 rounded-full placeholder-gray-400 outline-none animation duration-500 ease-in-out transform w-20 lg:w-24 focus:w-32 lg:focus:w-40">
+                        </form> 
+                    </div>
+                </div>
+                <!-- cols1 -->
+                <div class="ml-4 md:ml-2 md:ml-0 pt-6 md:pt-0 ">
+                    <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold">Quick Menu</h2>
+                    <nav class="text-gray-500 text-sm pt-3 md:pt-5 pb-3 md:pb-4">
+                        <ul>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>About</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Features</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Approach</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Events</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Classes</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Careers</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- cols2 -->
+                <div class="pt-2 md:pt-0 md:ml-2">
+                    <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold">Ministries</h2>
+                    <nav class="text-gray-500 text-sm pt-3 pt-3 md:pt-5 pb-3 md:pb-4">
+                        <ul>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Yoga for Health</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Yoga for Resilience</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Yoga Class</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Meditation</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Mind Balance</span></a></li>                        
+                        </ul>
+                    </nav>
+                </div>
+                <!-- cols3 -->
+                <div class="ml-4 md:ml-0 md:ml-0 pt-2 md:pt-0 ">
+                    <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold">Social Icons</h2>
+                    <div class="text-sm pt-3 md:pt-5 pb-3 md:pb-4">
+                        <a class="pr-3 lg:pr-5" href=""><i class="fab fa-facebook-f text-gray-500 hover:text-gray-600"></i></a>
+                        <a class="pr-3 lg:pr-5" href=""><i class="fab fa-twitter text-gray-500 hover:text-gray-600"></i></a>
+                        <a class="pr-3 lg:pr-5" href=""><i class="fab fa-instagram text-gray-500 hover:text-gray-600"></i></a>
+                        <a class="pr-3 lg:pr-5" href=""><i class="fab fa-vimeo-v text-gray-500 hover:text-gray-600"></i></a>
+                    </div>
+                </div>
+                <!-- cols4 -->
+            </div>
+        </section>
+        <section class="container mx-auto">
+            <div class="pt-3 pb-5 md:pt-6 md:pb-8 lg:pt-12 lg:pb-16">
+                <p class="text-center text-gray-500">Copyright © 2020 All Rights Reserved | This template is made with <span><i class="fas fa-heart text-teal-400"></i></span>  by <a href=""><span class="text-gray-300 hover:text-gray-500">Phihph12890</span></a></p>
+            </div>
+        </section>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+        //scroll Menu
+        var navbar = document.getElementById("navbar");
+        var navbar2 = document.getElementById("navbar2");
+        window.addEventListener("scroll", function(){
+            navbar.classList.toggle("sticky", window.scrollY > 0);
+            navbar2.classList.toggle("sticky", window.scrollY > 0);
+        });
+        window.addEventListener("scroll", function(){
+            navbar.style.transform = "translateY(0)";
+            navbar.style.transition = "0.7s";
+            myVar = setTimeout(function(){
+                if(window.scrollY == 0){
+                    navbar.style.transform = "translateY(0)";
+                    navbar.style.transition = "0.7s";
+                } else {
+                    navbar.style.transform = "translateY(-100px)";
+                    navbar.style.transition = "0.7s";
+                }
+            },5000);
+        });
+        var yogaClasses = document.getElementById("yogaClasses");
+        yogaClasses.addEventListener("mouseover", function(){
+            clearTimeout(myVar);
+        });
+        //ẩn hiện navbar lúc scroll chuột
+
+        // window.addEventListener("mousemove", function(){
+        //     navbar.style.transform = "translateY(0)";
+        //     navbar.style.transition = "0.7s";
+        //     setTimeout(function(){
+        //         if(window.scrollY == 0){
+        //             // navbar.style.opacity = 100;
+        //             navbar.style.transform = "translateY(0)";
+        //             navbar.style.transition = "0.7s";
+        //         } else {
+        //             // navbar.style.opacity = 0;
+        //             navbar.style.transform = "translateY(-100px)";
+        //             navbar.style.transition = "1s";
+        //         }
+        //     },5000);
+        // });
+        //ẩn hiện navbar lúc di chuột
+        
+        window.addEventListener("scroll", function(){
+            // navbar.style.opacity = 100;
+            navbar2.style.transform = "translateY(0)";
+            navbar2.style.transition = "0.7s";
+            setTimeout(function(){
+                if(window.scrollY == 0){
+                    // navbar.style.opacity = 100;
+                    navbar2.style.transform = "translateY(0)";
+                    navbar2.style.transition = "0.7s";
+                } else {
+                    // navbar.style.opacity = 0;
+                    navbar2.style.transform = "translateY(-200px)";
+                    navbar2.style.transition = "1s";
+                }
+            },5000);
+        });
+        
+        $(document).ready(function(){
+            $('.your-class').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                });
+        });
+        $(document).ready(function(){
+            $('.people-say').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                });
+        });
+        $(document).ready(function(){
+            $('.bg-image').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                });
+        });
+        
+        
+
+        // var inputName = document.getElementById('inputName');
+        // var inputEmail = document.getElementById('inputEmail');
+        // var inputPhoneNumber = document.getElementById('inputPhoneNumber');
+        // var inputMessage = document.getElementById('inputMessage');
+        // var sendMessage = document.getElementById('sendMessage');
+
+        // var errorName = document.getElementById('errorName');
+        // var errorEmail = document.getElementById('errorEmail');
+        // var errorPhoneNumber = document.getElementById('errorPhoneNumber');
+        // var errorMessage = document.getElementById('errorMessage');
+        // var validateEmail = /^[A-Za-z0-9_.]{6,32}@([a-zA-Z0-9]{2,12})(.[a-zA-Z]{2,12})+$/;
+        // var phoneRegex = /^[0-9]{10}$/;
+
+        //Check Name
+        // function checkName(){
+        //     if(inputName.value.trim() == ""){
+        //         inputName.style.backgroundColor = "yellow";
+        //         errorName.innerHTML = "Please enter your Name!"
+        //     } else {
+        //         inputName.style.backgroundColor = "white";
+        //         errorName.innerHTML = "";
+        //         return true;
+        //     }
+        // }
+        // function checkEmail(){
+        //     if(inputEmail.value.trim() == ""){
+        //         inputEmail.style.backgroundColor = "yellow";
+        //         errorEmail.innerHTML = "Please enter your Email!";
+        //     } else if(!validateEmail.test(inputEmail.value)){
+        //         inputEmail.style.backgroundColor = "yellow";
+        //         errorEmail.innerHTML = "Email invalidate!";
+        //     } else {
+        //         inputEmail.style.backgroundColor = "white";
+        //         errorEmail.innerHTML = "";
+        //         return true;
+        //     }
+        // }
+        // function checkPhoneNumber(){
+        //     if(!phoneRegex.test(inputPhoneNumber.value)){
+        //         inputPhoneNumber.style.backgroundColor = "yellow";
+        //         errorPhoneNumber.innerHTML = "Please enter the CORRECT Phone Number!";
+        //     } else {
+        //         inputPhoneNumber.style.backgroundColor = "white";
+        //         errorPhoneNumber.innerHTML = "";
+        //         return true;
+        //     }
+        // }
+        // function checkMessage(){
+        //     if(inputMessage.value.trim() == ""){
+        //         inputMessage.style.backgroundColor = "yellow";
+        //         errorMessage.innerHTML = "Please enter your Message!"
+        //     } else {
+        //         inputMessage.style.backgroundColor = "white";
+        //         errorMessage.innerHTML = "";
+        //         return true;
+        //     }
+        // }
+        // function checkAll(){
+        //     var c1 = checkName();
+        //     var c2 = checkEmail();
+        //     var c3 = checkPhoneNumber();
+        //     var c4 = checkMessage();
+
+        //     if( c1 && c2 && c3 && c4){
+        //         alert("Successfully!");
+        //     }
+        // }
+        // sendMessage.addEventListener("click", checkAll);
+        
+    </script>
+    <script>
+        var btnMobile = document.getElementById("btnMobile");
+        var mainMenu = document.getElementById("mainMenu");
+        console.log(btnMobile);
+        console.log(mainMenu);
+        btnMobile.addEventListener("click", function(){
+            mainMenu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

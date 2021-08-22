@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./build/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="./slick-1.8.1/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="./animate.css">
+    <script src="./wow.min.js"></script>
+</head>
+<style>
+    .background-image1 {
+        background-image:  url(./images/hero_1.jpg);
+    }
+    .background-image2 {
+        background-image:  url(./images/img_3.jpg);
+    }
+    .image {
+        background-image: url(./images/img_1.jpg);
+    }
+    .yoga-pricing {
+        background-image:  url(./images/img_1.jpg);
+        background-position: center center;
+    }
+    
+    .img1 {
+        position: relative;
+        width: 90%;
+        height: auto;
+    }
+    .img2 {
+        position: absolute;
+        width: 50%;
+        right: -60px;
+        border: 7px solid #fff;
+        bottom: -50px;
+    }
+    .play {
+        position: absolute;
+        top: 37%;
+        left: 47%;
+        
+    }
+    /* .imgrow {
+        height: 525px;
+    } */
+    /* .yoga-features {
+        width: 1100px;
+    } */
+    .searchBtn {
+        margin-top: 6px;
+    }
+    .sticky {
+        background-color: #38B2AC;
+        transition: 0.5s;
+        z-index: 1000;
+    }
+</style>
+<body>
+    <div id="navbar" class=" mx-auto hidden md:flex justify-between fixed top-0 left-0 right-0 px-8 xl:px-32 py-2 z-50 wow fadeInDownBig">
+        <a class="" style="font-family: Playfair Display" href=""><h1 class="text-4xl text-white  ">YogaLife</h1></a>
+        <div class=" searchBtn ml-4  hidden lg:block">
+            <form class=" outline-none pl-4 py-2 inline-flex bg-white rounded-full" id="demo-search">
+                <svg class="text-black w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="search" placeholder="Search" class="px-3 rounded-full placeholder-gray-400 outline-none animation duration-500 ease-in-out w-32 focus:w-48 ">
+            </form> 
+        </div>
+        <div class="flex items-center">
+            <nav>
+                <ul class="hidden md:flex">
+                    <li><a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-bold text-gray-400 hover:text-gray-200" href="./Asm.html">Home</a></li>
+                    <li class="relative group">
+                        <a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-bold text-white hover:text-gray-200" href="./Asm-1.html">Yoga Classes <i class="fas fa-angle-down"></i></a>
+                        <ul class="absolute bg-black text-white shadow py-2 px-4 rounded-md w-full hidden group-hover:block mt-2 ml-4 leading-10">
+                            <li class="hover:text-teal-400"><a href="#">Yoga Dance</a></li>
+                            <li class="hover:text-teal-400"><a href="#">Bare Workout</a></li>
+                            <li class="hover:text-teal-400"><a href="#">Peace Of Mine</a></li>
+                            <li class="hover:text-teal-400 relative group">
+                                <a href="#">More</a>
+                                
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-semibold text-gray-400 hover:text-gray-200" href="./Asm-2.html">Events</a></li>
+                    <li><a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-semibold text-gray-400 hover:text-gray-200" href="./Asm-3.html">About</a></li>
+                    <li><a class="px-4 xl:px-6 py-4 text-base xl:text-lg font-semibold text-gray-400 hover:text-gray-200" href="./Asm-4.html">Contact</a>  </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div id="navbar2" class=" md:hidden fixed top-0 left-0 right-0 px-6 py-1 z-50">
+        <div  class="flex justify-between md:hidden ">
+            <a style="font-family: Playfair Display" href=""><h1 class="text-2xl md:text-4xl text-white  ">YogaLife</h1></a>
+            <button id="btnMobile"><i class="fas fa-bars px-5 text-white"></i></button>
+        </div>
+        <nav class="mt-2">
+            <ul class="hidden md:flex " id="mainMenu" >
+                <li><a class="pl-4 text-sm font-semibold text-gray-400 hover:text-gray-200" href="./Asm.html">Home</a></li>
+                <li><a class="pl-4 text-sm font-bold     text-white hover:text-gray-200" href="./Asm-1.html">Yoga Classes</a></li>
+                <li><a class="pl-4 text-sm font-semibold text-gray-400 hover:text-gray-200" href="./Asm-2.html">Events</a></li>
+                <li><a class="pl-4 text-sm font-semibold text-gray-400 hover:text-gray-200" href="./Asm-3.html">About</a></li>
+                <li><a class="pl-4 text-sm font-semibold text-gray-400 hover:text-gray-200" href="./Asm-4.html">Contact</a>  </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- navbarMobile -->
+
+    <header class="overflow-hidden">
+        <div class="relative">
+            <div class="background-image2 bg-no-repeat bg-cover bg-center w-screen h-screen inset-0">
+                <div class="mx-auto relative z-10">
+                    <div class="  text-center py-64 wow fadeIn">
+                        <p class="uppercase text-base text-white pt-16 pb-4" style="font-family: inherit;">YOGA FOR EVERYBODY</p>
+                        <p class="text-5xl md:text-6xl text-white font-bold" style="font-family: Playfair Display"; >Classes</p>
+                    </div>
+                    <div class="py-32"></div>
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+    </header>
+    <!-- end header -->
+    <section class="container mx-auto mt-4 md:mt-8 lg:mt-12 xl:mt-16 overflow-hidden">
+        <div class="wow fadeInUpBig">
+            <div class="text-center pt-6 md:pt-8 lg:pt-12 xl:pt-16 pb-2 md:pb-4 lg:pb-6">
+                <h2 class=" inline-block font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl border-b-2 border-black ">Yoga Features</h2>
+            </div>
+            <div class=" yoga-features grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pt-4 md:pt-8 lg:pt-12 xl:pt-16 mx-auto w-3/4">
+                <div>
+                    <div class="text-center">
+                        <span><i class="fas fa-dove text-teal-400 text-6xl"></i></span>
+                        <h4 class="text-xl md:text-2xl font-semibold pb-2 md:pb-4 pt-2 md:pt-6">Peace of Mind</h4>
+                        <p class="text-base md:text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus</p>
+                    </div>
+                </div>
+                <!-- cols1 -->
+                <div class="">
+                    <div class="text-center">
+                        <span><i class="fas fa-spa text-teal-400 text-6xl"></i></span>
+                        <h4 class="text-xl md:text-2xl font-semibold pb-2 md:pb-4 pt-2 md:pt-6">Mindfullness</h4>
+                        <p class="text-base md:text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus</p>
+                    </div>
+                </div>
+                <!-- cols2 -->
+                <div>
+                    <div class="text-center ">
+                        <span><i class="fas fa-walking text-teal-400 text-6xl"></i></span>
+                        <h4 class="text-xl md:text-2xl font-semibold pb-2 md:pb-4 pt-2 md:pt-6">Meditation</h4>
+                        <p class="text-base md:text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus</p>
+                    </div>
+                </div>
+                <!-- cols3 -->
+                <div>
+                    <div class="text-center">
+                        <span><i class="fas fa-book-open text-teal-400 text-6xl"></i></span>
+                        <h4 class="text-xl md:text-2xl font-semibold pb-2 md:pb-4 pt-2 md:pt-6">Yoga Carpet</h4>
+                        <p class="text-base md:text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus</p>
+                    </div>
+                </div>
+                <!-- cols4 -->
+            </div>
+        </div>
+    </section>
+    <section class=" classes mx-auto mt-6 md:mt-10 lg:mt-16 xl:mt-20 overflow-hidden">
+        <div class="text-center wow bounceInRight">
+            <h2 class=" inline-block font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl border-b-2 border-black ">Classes</h2>
+        </div>
+        <div class="mt-8 md:mt-8 lg:mt-12 xl:mt-16 wow bounceInLeft">
+            <article class="relative grid grid-cols-1 md:grid-cols-2 mb-10 md:mb-0 group">
+                <div class="z-50">
+                    <img class="h-full md:h-132 w-screen" src="./images/img_1.jpg" alt="">
+                </div>
+                <aside>
+                    <div class="pt-4 md:pt-12 lg:pt-12 pl-4 md:pl-8 lg:ml-16 xl:ml-24 text-center md:text-left">
+                        <h3 class=" text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Rhythm & Routine</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. Deleniti <br> odio laboriosam in recusandae <br> expedita.</p>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Time:</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Monday — Wednesday <br>
+                            8:30 am — 9:30 am</p>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Instructor:</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Jason Snyder, Kathryn Miller</p>
+                        <button class=" rounded-full bg-teal-400 text-white px-6 py-2 hover:bg-teal-500 transition duration-300 ease-in-out transform hover:scale-110" >Enroll Now</button>  
+                    </div>
+                </aside>
+            </article>
+            <!-- row1 -->
+            <article class="relative grid grid-cols-1 md:grid-cols-2 mb-10 md:mb-0 group">
+                <aside class="hidden md:block">
+                    <div class="pt-4 md:pt-12 lg:pt-12 pl-4 md:pl-8 lg:ml-16 xl:ml-24 text-center md:text-left">
+                        <h3 class=" text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Rhythm & Routine</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. Deleniti <br> odio laboriosam in recusandae <br> expedita.</p>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Time:</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Monday — Wednesday <br>
+                            8:30 am — 9:30 am</p>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Instructor:</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Jason Snyder, Kathryn Miller</p>
+                        <button class=" rounded-full bg-teal-400 text-white px-6 py-2 hover:bg-teal-500 transition duration-300 ease-in-out transform hover:scale-110" >Enroll Now</button>  
+                    </div>
+                </aside>
+                <div class="z-50">
+                    <img class="h-full md:h-132 w-screen" src="./images/img_2.jpg" alt="">
+                </div>
+                <aside class="md:hidden">
+                    <div class="pt-4 md:pt-12 lg:pt-12 pl-4 md:pl-8 lg:ml-16 xl:ml-24 text-center md:text-left">
+                        <h3 class=" text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Rhythm & Routine</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. Deleniti <br> odio laboriosam in recusandae <br> expedita.</p>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Time:</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Monday — Wednesday <br>
+                            8:30 am — 9:30 am</p>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Instructor:</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Jason Snyder, Kathryn Miller</p>
+                        <button class=" rounded-full bg-teal-400 text-white px-6 py-2 hover:bg-teal-500 transition duration-300 ease-in-out transform hover:scale-110" >Enroll Now</button>  
+                    </div>
+                </aside>
+            </article>
+            <!-- row2 -->
+            <article class="relative grid grid-cols-1 md:grid-cols-2 mb-10 md:mb-0 group ">
+                <div class="z-50">
+                    <img class="h-full md:h-132 w-screen" src="./images/img_3.jpg" alt="">
+                </div>
+                <aside>
+                    <div class="pt-4 md:pt-12 lg:pt-12 pl-4 md:pl-8 lg:ml-16 xl:ml-24 text-center md:text-left">
+                        <h3 class=" text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Rhythm & Routine</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. Deleniti <br> odio laboriosam in recusandae <br> expedita.</p>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Time:</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Monday — Wednesday <br>
+                            8:30 am — 9:30 am</p>
+                        <h3 class="text-lg md:text-xl lg:text-2xl font-semibold" style="font-family: Playfair Display">Instructor:</h3>
+                        <p class="text-base md:text-lg text-gray-700 pb-6 pt-1">Jason Snyder, Kathryn Miller</p>
+                        <button class=" rounded-full bg-teal-400 text-white px-6 py-2 hover:bg-teal-500 transition duration-300 ease-in-out transform hover:scale-110">Enroll Now</button>  
+                    </div>
+                </aside>
+            </article>
+            <!-- row3 -->
+        </div>
+    </section>
+    <section class="bg-gray-100 pt-6 md:pt-10 lg:pt-16 xl:pt-20 pb-2 md:pb-4 lg:pb-6">
+        <div class="container mx-auto wow flipInX">
+            <div class="text-center">
+                <h2 class=" inline-block font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl border-b-2 border-black ">What People Say</h2>
+            </div>
+            <div class=" people-say grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 md:pt-8 lg:pt-12 xl:pt-16">
+                <div class="mb-2 md:mb-8">
+                    <img class="rounded-md mx-auto " src="./images/person_1.jpg" alt="" style="width: 20%;">
+                    <div class="ml-2 mt-3">
+                        <h3 class="text-xl text-center">Katie Johnson</h3>
+                        <blockquote class="italic leading-6 text-gray-600 pt-2 text-center px-8">“Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Alias accusantium qui optio, possimus necessitatibus voluptate  aliquam velit nostrum tempora ipsam!”</blockquote>
+                    </div>
+                </div>
+                <!-- cols1 -->
+                <div class="mb-2 md:mb-8">
+                    <img class="rounded-md mx-auto" src="./images/person_2.jpg" alt="" style="width: 20%;">
+                    <div class="ml-2 mt-3">
+                        <h3 class="text-xl text-center">Jane Mars</h3>
+                        <blockquote class="italic leading-6 text-gray-600 pt-2 text-center px-8">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!”</blockquote>
+                    </div>
+                </div>
+                <!-- cols2 -->
+                <div class="mb-2 md:mb-8">
+                    <img class="rounded-md mx-auto" src="./images/person_3.jpg" alt="" style="width: 20%;">
+                    <div class="ml-2 mt-3">
+                        <h3 class="text-xl text-center">Shane Holmes</h3>
+                        <blockquote class="italic leading-6 text-gray-600 pt-2 text-center px-8">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!”</blockquote>
+                    </div>
+                </div>
+                <!-- cols3 -->
+                <div>
+                    <img class="rounded-md mx-auto" src="./images/person_4.jpg" alt="" style="width: 20%;">
+                    <div class="ml-2 mt-3">
+                        <h3 class="text-xl text-center">Mark Johnson</h3>
+                        <blockquote class="italic leading-6 text-gray-600 pt-2   text-center px-8">“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias accusantium qui optio, possimus necessitatibus voluptate aliquam velit nostrum tempora ipsam!”</blockquote>
+                    </div>
+                </div>
+                <!-- cols4 -->
+                
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 wow pulse">
+        <section class="container mx-auto w-11/12 lg:w-5/6 ">
+            <div class="grid grid-cols-2 md:grid-cols-4 md:pt-8 lg:pt-10 xl:pt-12 gap-6 md:gap-8 lg:gap-10 lg:gap-12">
+                <div class="pt-6 md:pt-0 ">
+                    <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold">About</h2>
+                    <p class="text-sm text-gray-500 pr-4 xl:pr-12 pt-3 md:pt-5 pb-3 md:pb-4 leading-6">Lorem ipsum dolor <br class="hidden md:block lg:hidden"> sit amet, consectetur adipisicing elit. <br class="hidden xl:block"> Repellat quos rem ullam, <br class="hidden xl:block"> placeat amet.</p>
+                    <button class="text-white bg-teal-400 px-3 md:px-4 lg:px-6 py-2  rounded-full hover:bg-teal-500 transition duration-500 ease-in-out transform hover:scale-110 ">Read More</button>
+                    <div class="mt-3 md:mt-4 lg:mt-6">
+                        <form class=" outline-none pl-4 py-2 inline-flex bg-white rounded-full " id="demo-search">
+                            <svg class="text-black w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                            <input type="search" placeholder="Search" class="px-2 rounded-full placeholder-gray-400 outline-none animation duration-500 ease-in-out transform w-20 lg:w-24 focus:w-32 lg:focus:w-40">
+                        </form> 
+                    </div>
+                </div>
+                <!-- cols1 -->
+                <div class="ml-4 md:ml-2 md:ml-0 pt-6 md:pt-0 ">
+                    <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold">Quick Menu</h2>
+                    <nav class="text-gray-500 text-sm pt-3 md:pt-5 pb-3 md:pb-4">
+                        <ul>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>About</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Features</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Approach</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Events</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Classes</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Careers</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- cols2 -->
+                <div class="pt-2 md:pt-0 md:ml-2">
+                    <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold">Ministries</h2>
+                    <nav class="text-gray-500 text-sm pt-3 pt-3 md:pt-5 pb-3 md:pb-4">
+                        <ul>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Yoga for Health</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Yoga for Resilience</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Yoga Class</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Meditation</span></a></li>
+                            <li class="mb-1 md:mb-3 hover:text-gray-600"><a href=""><span>Mind Balance</span></a></li>                        
+                        </ul>
+                    </nav>
+                </div>
+                <!-- cols3 -->
+                <div class="ml-4 md:ml-0 md:ml-0 pt-2 md:pt-0 ">
+                    <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold">Social Icons</h2>
+                    <div class="text-sm pt-3 md:pt-5 pb-3 md:pb-4">
+                        <a class="pr-3 lg:pr-5" href=""><i class="fab fa-facebook-f text-gray-500 hover:text-gray-600"></i></a>
+                        <a class="pr-3 lg:pr-5" href=""><i class="fab fa-twitter text-gray-500 hover:text-gray-600"></i></a>
+                        <a class="pr-3 lg:pr-5" href=""><i class="fab fa-instagram text-gray-500 hover:text-gray-600"></i></a>
+                        <a class="pr-3 lg:pr-5" href=""><i class="fab fa-vimeo-v text-gray-500 hover:text-gray-600"></i></a>
+                    </div>
+                </div>
+                <!-- cols4 -->
+            </div>
+        </section>
+        <section class="container mx-auto">
+            <div class="pt-3 pb-5 md:pt-6 md:pb-8 lg:pt-12 lg:pb-16">
+                <p class="text-center text-gray-500">Copyright © 2020 All Rights Reserved | This template is made with <span><i class="fas fa-heart text-teal-400"></i></span>  by <a href=""><span class="text-gray-300 hover:text-gray-500">Phihph12890</span></a></p>
+            </div>
+        </section>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script>
+         //scroll Menu
+        var navbar = document.getElementById("navbar");
+        var navbar2 = document.getElementById("navbar2");
+        window.addEventListener("scroll", function(){
+            navbar.classList.toggle("sticky", window.scrollY > 0);
+            navbar2.classList.toggle("sticky", window.scrollY > 0);
+        });
+        window.addEventListener("scroll", function(){
+            navbar.style.transform = "translateY(0)";
+            navbar.style.transition = "0.7s";
+            setTimeout(function(){
+                if(window.scrollY == 0){
+                    navbar.style.transform = "translateY(0)";
+                    navbar.style.transition = "0.7s";
+                } else {
+                    navbar.style.transform = "translateY(-100px)";
+                    navbar.style.transition = "0.7s";
+                }
+            },5000);
+        });
+        //ẩn hiện navbar lúc scroll chuột
+        
+        // window.addEventListener("mousemove", function(){
+        //     navbar.style.transform = "translateY(0)";
+        //     navbar.style.transition = "0.7s";
+        //     setTimeout(function(){
+        //         if(window.scrollY == 0){
+        //             // navbar.style.opacity = 100;
+        //             navbar.style.transform = "translateY(0)";
+        //             navbar.style.transition = "0.7s";
+        //         } else {
+        //             // navbar.style.opacity = 0;
+        //             navbar.style.transform = "translateY(-100px)";
+        //             navbar.style.transition = "1s";
+        //         }
+        //     },5000);
+        // });
+        //ẩn hiện navbar lúc di chuột
+        window.addEventListener("scroll", function(){
+            navbar2.style.transform = "translateY(0)";
+            navbar2.style.transition = "0.7s";
+            setTimeout(function(){
+                if(window.scrollY == 0){
+                    navbar2.style.transform = "translateY(0)";
+                    navbar2.style.transition = "0.7s";
+                } else {
+                    navbar2.style.transform = "translateY(-200px)";
+                    navbar2.style.transition = "1s";
+                }
+            },5000);
+        });
+
+        // $(document).ready(function(){
+        //     $('.your-class').slick({
+        //         infinite: true,
+        //         slidesToShow: 3,
+        //         slidesToScroll: 1,
+        //         autoplay: true,
+        //         autoplaySpeed: 2000,
+        //         });
+        // });
+
+        // $(document).ready(function(){
+        //     $('.people-say').slick({
+        //         infinite: true,
+        //         slidesToShow: 2,
+        //         slidesToScroll: 1,
+        //         autoplay: true,
+        //         autoplaySpeed: 2000,
+        //         });
+        // });
+
+        $(document).ready(function(){
+            $('.bg-image').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                });
+        });
+        document.getElementById('next').addEventListener('click', function(){
+            $('.bg-image').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            });
+        });
+        
+    </script>
+    <script>
+        var btnMobile = document.getElementById("btnMobile");
+        var mainMenu = document.getElementById("mainMenu");
+        console.log(btnMobile);
+        console.log(mainMenu);
+        btnMobile.addEventListener("click", function(){
+            mainMenu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

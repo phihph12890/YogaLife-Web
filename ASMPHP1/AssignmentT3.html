@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asm3</title>
+    <link rel="stylesheet" href="/build/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<style>
+    .container {
+        width: 1040px;  
+    }
+    .search {
+        background-color: #f8f8f8f8;
+    }
+    .search-input {
+        width: 500px;
+    }
+    .videoDesc {
+        position: absolute;
+        bottom: 13px;
+        left: 45px;
+    }
+    .videoItem {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+    }
+    .mostViewer {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+    }
+    .goldPrice {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+    }
+    
+</style>
+<body>
+        <div class="bg-red-700 text-white">
+            <div class="container mx-auto flex justify-between text-sm py-1">
+                <a href="">Thethao247.vn</a>
+                <div>
+                    <a class="px-2" href="">Giới thiệu</a>
+                    <a class="px-2" href="">Liên hệ</a>
+                    <a class="pl-2" href=""><i class="far fa-envelope"></i> lienhe@tinmoi.vn</a>
+                </div>
+            </div>
+        </div>
+        <div id="navbar" class="navBar sticky top-0 left-0 right-0 z-50 text-white" style="background-color: #003366;">
+            <div class="container mx-auto flex">
+                <a href="./AssignmentT1.html"><img class="py-2" src="https://www.tinmoi.vn/responsive/static/assets/img/tinmoi_logo.svg" alt=""></a>
+                <nav style="margin-left: 60px;">
+                    <ul class="flex justify-items-stretch text-sm font-semibold" style="line-height: 50px;">
+                        <li class="px-3 mx-1 hover:bg-white hover:text-black relative group">
+                            <a href="./AssignmentT2.html">Thể Thao</a>
+                            <ul class="absolute hidden group-hover:block bg-gray-100 border border-gray-300 -ml-3" style="width: 200px;">
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Bóng đá</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300"><a href="">Video Bóng đá</a></li>
+                            </ul>
+                        </li>
+                        <li class="px-3 mx-1 hover:bg-white hover:text-black relative group">
+                            <a href="">Giải Trí</a>
+                            <ul class="absolute hidden group-hover:block bg-gray-100 border border-gray-300 -ml-3" style="width: 300px;">
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Ngôi sao</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Nhạc</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Thời trang</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Phim </a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Giới trẻ</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Thư giãn</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300"><a href="">Hậu trường</a></li>
+                            </ul>
+                        </li>
+                        <li class="px-3 mx-1 hover:bg-white hover:text-black relative group">
+                            <a href="">Pháp Luật</a>
+                            <ul class="absolute hidden group-hover:block bg-gray-100 border border-gray-300 -ml-3" style="width: 200px;">
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Pháp đình</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">An ninh hình sự</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 "><a href="">Vụ án</a></li>
+                            </ul>
+                        </li>
+                        <li class="px-3 mx-1 hover:bg-white hover:text-black relative group">
+                            <a href="">Đời Sống</a>
+                            <ul class="absolute hidden group-hover:block bg-gray-100 border border-gray-300 -ml-3" style="width: 200px;">
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Sự kiện hàng ngày</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Adam - Eva</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Du lịch</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Làm đẹp</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Thế giới</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Cuộc sống</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Ẩm thực</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Tin thời tiết</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Cafe sáng</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Chuyện lạ</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 "><a href="">Mạng xã hội</a></li>
+                            </ul>
+                        </li>
+                        <li class="px-3 mx-1 hover:bg-white hover:text-black relative group">
+                            <a href="">Kinh Tế</a>
+                            <ul class="absolute hidden group-hover:block bg-gray-100 border border-gray-300 -ml-3" style="width: 200px;">
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Bất động sản</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Chứng khoán</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Doanh nhân</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Việc làm</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 "><a href="">Thị trường</a></li>
+                            </ul>
+                        </li>
+                        <li class="px-3 mx-1 hover:bg-white hover:text-black relative group">
+                            <a href="">Giáo Dục</a>
+                            <ul class="absolute hidden group-hover:block bg-gray-100 border border-gray-300 -ml-3" style="width: 200px;">
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Tiêu điểm</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 "><a href="">Tuyển sinh</a></li>
+                            </ul>
+                        </li>
+                        <li class="px-3 mx-1 hover:bg-white hover:text-black relative group">
+                            <a href="">Công Nghệ</a>
+                            <ul class="absolute hidden group-hover:block bg-gray-100 border border-gray-300 -ml-3" style="width: 200px;">
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Kinh nghiệm - Thủ thuật</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Sản phẩm mới</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 "><a href="">App</a></li>
+                            </ul>
+                        </li>
+                        <li class="px-3 mx-1 hover:bg-white hover:text-black relative group">
+                            <a href="">Ôtô - Xe máy</a>
+                            <ul class="absolute hidden group-hover:block bg-gray-100 border border-gray-300 -ml-3" style="width: 200px;">
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Thị trường</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Đánh giá</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Ôtô</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 "><a href="">Xe máy</a></li>
+                            </ul>
+                        </li>
+                        <li class="px-3 mx-1 hover:bg-white hover:text-black relative group">
+                            <a href="">Video</a>
+                            <ul class="absolute hidden group-hover:block bg-gray-100 border border-gray-300 -ml-3" style="width: 200px;">
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Video Tin tức</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Video Pháp luật</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Video Đời sống</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Video Kinh doanh</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 border-b border-gray-300"><a href="">Video Giải trí</a></li>
+                                <li class="flex items-center h-10 px-3 hover:bg-gray-300 "><a href="">Video Thể thao</a></li>
+                            </ul>
+                        </li>
+                        <li id="btnSearch" class="px-3 mx-1 hover:bg-white hover:text-black"><a id="btnSearch" href="#"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    <div id="search" class=" hidden bg-gray-200 mt-2">
+        <div class="container mx-auto py-6">
+            <div class="inline-flex">
+                <input class="search-input py-2 px-3 rounded-full outline-none text-sm w-64" type="text" placeholder="Tìm kiếm">
+                <input class=" ml-3 bg-blue-800 text-white text-sm rounded-full px-4 py-1" type="submit" value="Search">
+            </div>
+        </div>
+    </div>
+    <div class="content container mx-auto mt-5">
+        <div class="content1 grid grid-cols-3 gap-12">
+            <div class="col-span-2">
+                <div class="flex justify-between">
+                        <p class="text-xs text-blue-900">
+                            <span>Trang chủ</span> <span><i class="fas fa-angle-double-right text-xs px-2"></i></span> 
+                            <span>Thể thao</span> <span><i class="fas fa-angle-double-right text-xs px-2"></i></span>
+                            <span>Bóng đá</span> 
+                        </p>
+                        <p class="text-xs text-blue-900">Thứ tư, 04/11/2020 19:30 (GMT 7)</p>
+                </div>
+                <div class="content mt-4">
+                    <h1 class="text-4xl font-bold leading-tight ">Huỳnh Anh vẫn níu kéo kỉ niệm với gia đình Quang Hải hậu ồn ào</h1>
+                    <h4 class="font-bold text-lg leading-8 mt-6 hover:text-blue-600"><a href="">Dù đã chia tay và Quang Hải cũng đã xóa hết mọi 'dấu vết' liên quan đến bạn gái nhưng Huỳnh Anh thì vẫn giữ kỉ niệm với gia đình của nam cầu thủ.</a></h4>
+                    <div class="container mx-auto flex mt-6 mb-8">
+                        <a href=""><img class="text-red-500 mt-2" src="./images/trending-up.png" alt=""></a>
+                        <a href=""><p class=" px-2 py-1 rounded-full text-center text-sm text-red-700 ">Sự kiện:</p></a>
+                        <a href=""><p class="bg-red-200 px-2 py-1 rounded-full text-center text-sm text-red-700 hover:bg-red-700 hover:text-white">Cầu thủ Quang Hải</p></a>
+                    </div>
+                    <p class="leading-7">Những ngày qua, hết chuyện Hoa hậu chuyển giới Hương Giang bị tẩy chay gây xôn xao thì lại đến ồn ào chuyện tình cảm của cầu thủ Quang Hải. Điều được nhắc nhiều nhất trong ngày hôm qua chính là chuyện bạn gái Quang Hải bị tố là "tiểu tam".</p>
+                    <div>
+                        <img class="w-full h-full mt-5" src="https://media.tinmoi.vn/resize_600x726/upload/hatrangfb/2020/11/04/053729-quang-hai3.jpg" alt="">
+                        <div class="bg-gray-200">
+                            <p class="text-center text-sm italic text-gray-700 py-3">Ồn ào của bạn gái cũ của Quang Hải đang gây xôn xao trên mạng xã hội.</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 leading-7">Ngay sau khi ồn ào nổ ra, phía Quang Hải đã xác nhận chuyện cả hai đã chia tay hơn 1 tháng nên không có chuyện nam cầu thủ bị người yêu phản bội. Dường như phủ nhận chưa được, Quang Hải đã quyết tâm muốn xóa sạch những gì liên quan đến Huỳnh Anh để tránh ảnh hưởng đến mình. Nam cầu thủ đã âm thầm bỏ theo dõi Huỳnh Anh trên mạng xã hội đồng thời cũng xóa hết những bức hình thân mật, tình tứ với nhau nhằm phủi sạch mối quan hệ.</p>
+                    <div>
+                        <img class="w-full h-full mt-5" src="https://media.tinmoi.vn/resize_650x479/upload/hatrangfb/2020/11/04/053324-quang-hai6.jpg" alt="">
+                        <div class="bg-gray-200">
+                            <p class="text-center text-sm italic text-gray-700 py-3">Quang Hải đã có hành động phũ phàng khi xóa sạch hình ảnh của cả hai.</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 leading-7">Trong khi Quang Hải có động thái hết sức phũ phàng với mối tình đầy ồn ào này, Huỳnh Anh lại có động thái hoàn toàn khác. Ban đầu Huỳnh Anh vẫn giữ những bức hình của mình cùng Quang Hải  trên trang cá nhân trong ngày sinh nhật và những huy chương, bằng khen của nam cầu thủ nhưng sau đó, cô nàng cũng nhanh chóng thẳng tay xóa bỏ.</p>
+                    <p class="mt-3 leading-7">Thế nhưng, dân mạng phát hiện, trên trang cá nhân của Huỳnh Anh vẫn còn lưu giữ lại những bức hình liên quan đến gia đình của cầu thủ Hà Nội. Bức ảnh chụp cùng mẹ Quang Hải tại nhà trong ngày sinh nhật và một bức ảnh ở ngoài cổng cùng bức ảnh với cháu gái Quang hải vẫn được lưu giữ. Điều này khiến nhiều người khá khó hiểu.</p>
+                    <img class="w-full h-full mt-5" src="https://media.tinmoi.vn/resize_650x811/upload/hatrangfb/2020/11/04/053729-quang-hai.jpg" alt="">
+                    <img class="w-full h-full mt-10" src="https://media.tinmoi.vn/resize_650x811/upload/hatrangfb/2020/11/04/053729-quang-hai1.jpg" alt="">
+                    <div>
+                        <img class="w-full h-full mt-10" src="https://media.tinmoi.vn/resize_650x455/upload/hatrangfb/2020/11/04/053729-quang-hai2.jpg" alt="">
+                        <div class="bg-gray-200">
+                            <p class="text-center text-sm italic text-gray-700 py-3">Trong khi Huỳnh Anh vẫn còn giữ kỉ niệm với mẹ và cháu gái của Quang Hải.</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 leading-7">Trong khi bị vướng những ồn ào tình ái thậm chí còn bị bạn trai phủi sạch mối quan hệ nhưng Huỳnh Anh vẫn giữ lại những kỉ niệm liên quan đến bạn trai cũ. Một số người cho rằng, Huỳnh Anh đang muốn níu kéo mối quan hệ, một số khác lại cho rằng có lẽ cô vẫn yêu thích mẹ và cháu gái của bạn trai nên giữ lại làm kỷ niệm. Tuy nhiên, hiện tại Huỳnh Anh vẫn giữ im lặng giữa tâm bão.</p>
+                </div>
+                <div>
+                    <img class="w-full h-full mt-5" src="https://media.tinmoi.vn/resize_650x433/upload/hatrangfb/2020/11/04/053324-quang-hai5.jpg" alt="">
+                    <div class="bg-gray-200">
+                        <p class="text-center text-sm italic text-gray-700 py-3">Huỳnh Anh từng có mối quan hệ tốt với mẹ Quang Hải.</p>
+                    </div>
+                </div>
+                <p class="mt-3 leading-7">Được biết thời còn mặn nồng bên nhau, Huỳnh Anh rất thân thiết với mẹ của Quang Hải. Cô thường xuất hiện cùng vị phụ huynh đi cổ vũ cho nam cầu thủ.</p>
+                
+                <div class="mt-6">
+                    <h4 class="font-bold text-base text-blue-900">Tin Liên Quan</h4>
+                    <a href="">
+                        <p class="text-sm mt-3 hover:text-blue-800 font-bold"><i class="fas fa-chevron-right text-red-600 mr-2 text-xs"></i>
+                            Những tin tức hot nhất trong ngày 5/11: Kết quả bầu cử Tổng thống Mỹ, tin bão số 10, câu chuyện <span class="ml-5">tranh cãi về Thủy Tiên làm từ thiện...</span>
+                        </p>
+                    </a>
+                    <div class="my-2"><a href=""><img class="w-full h-full" src="./images/22.jpg" alt=""></a></div>
+                    <a href="">
+                        <p class="text-sm mt-3 hover:text-blue-800 font-bold"><i class="fas fa-chevron-right text-red-600 mr-2 text-xs"></i>
+                            Xôn xao hình ảnh Quang Hải đăng tải: 'Cảm ơn em đã cho anh cao thêm 20cm' hậu 'quay xe' với <span class="ml-5">Huỳnh Anh</span>
+                        </p>
+                    </a>
+                    <a href="">
+                        <p class="text-sm mt-3 hover:text-blue-800 font-bold"><i class="fas fa-chevron-right text-red-600 mr-2 text-xs"></i>
+                            Duy Mạnh lại bị dân mạng hỏi khó vụ Quang Hải gặp Huỳnh Anh ở đám cưới
+                        </p>
+                    </a>
+                    <a href="">
+                        <p class="text-sm mt-3 hover:text-blue-800 font-bold"><i class="fas fa-chevron-right text-red-600 mr-2 text-xs"></i>
+                            Huỳnh Anh vô tình giúp Quang Hải 'cao thêm 30cm' trên trang Wikipedia
+                        </p>
+                    </a>      
+                </div>
+                <div class="mt-8 flex justify-between">
+                    <div class="ml-5">
+                        <a class="text-white px-5 py-2 pb-3 bg-blue-900 rounded-full hover:bg-black" href=""><i class="fab fa-facebook-f "></i><span class="ml-3 font-bold text-sm">Share FB</span></a>
+                        <a class=" ml-2 text-blue-900 px-5 py-2 pb-3 bg-gray-300 rounded-full hover:bg-gray-500" href=""><i class="font-bold fab fa-facebook-f "></i><span class="ml-3 font-bold text-sm">Page</span></a>
+                    </div>
+                    <p class="font-bold text-base ">Hà Trang (t/h)</p>
+                </div>
+                <div class="flex justify-between mt-6 border-b border-blue-800 ">
+                    <p class="font-bold text-blue-800 uppercase">tài trợ</p>
+                    <a class="opacity-50 hover:opacity-100" href=""><img  src="https://cdn.mgid.com/images/logos/ByMGID.svg" alt="" style="height: 27px; width: 65px"></a>
+                </div>
+                <div class="grid grid-cols-4 gap-3 mt-5">
+                    <div>
+                        <a href=""><img class="w-full " src="https://s-img.mgid.com/g/7340271/492x277/-1x-1x492x328/aHR0cDovL2ltZ2hvc3RzLmNvbS90LzIwMjAtMTAvMzgxNjAzLzNjOTdhMDMzMmUxYjg5M2E0ZjA4MWQyZGNiYzUyMTYxLmpwZw.jpg?v=1604985955-Wa9-bHBLMCxH_Au5yMbXx4WmB7X_3P7PVfL693ApStM" alt=""></a>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Bị huyết áp cao sẽ khỏi hẳn chỉ trong 5 ngày nhờ thứ này</a></h2> 
+                    </div>
+                    <div>
+                        <a href=""><img class="w-full " src="https://s-img.mgid.com/g/7419399/492x277/0x0x492x328/aHR0cDovL2ltZ2hvc3RzLmNvbS90LzIwMjAtMTEvNTY0ODU4L2E2MTVlMWQ4ZGE1ZDA2MDMxYWQ0MTMzYTA5MDM2YTdiLmpwZWc.jpg?v=1604985955-CsUiImF2qXO3NiH8zLybq1j1K3rQ3Z5GoB9iX45GTpE" alt=""></a>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Dành ra 2 phút đọc - vĩnh viễn không còn hôi nách chỉ sau 1 lộ</a></h2> 
+                    </div>
+                    <div>
+                        <a href=""><img class="w-full " src="https://s-img.mgid.com/g/7376160/492x277/0x707x1066x710/aHR0cDovL2ltZ2hvc3RzLmNvbS90LzIwMjAtMDUvMjg3MzU1LzA0YzZjODM3Y2I4MzRkNjFkYzJhZTQwMGVlYjU0NTBjLmpwZw.jpg?v=1604985955-z2vFvp1VwUwDaz8lQOWGGflPiP3xTP76mlLvHtH36pA" alt=""></a>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Bỏ 3 phút đọc rồi làm theo, huyết áp ổn định đến già</a></h2> 
+                    </div>
+                    <div>
+                        <a href=""><img class="w-full " src="https://s-img.mgid.com/g/7158147/492x277/0x0x492x328/aHR0cDovL2ltZ2hvc3RzLmNvbS90LzIwMjAtMTAvMzgxNjAzLzQ3NmUwZmFmNDZkZDczMGI4NDRhY2MxM2ZmMWQ4ODM2LmpwZWc.jpg?v=1604985955-dvurTeMMYK4jNqnNJLUukZgB4zCih2nOMnl4in7b_EI" alt=""></a>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Bác sĩ: Vô tình phát hiện ra cách đơn giản quét sạch cao huyết áp</a></h2> 
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <img src="./images/23.jpg" alt="">
+                </div>
+                <div class="mt-6 text-gray-800">
+                    <h4>Nguồn: Nguoiduatin.vn</h4>
+                    <p class="mt-4 text-sm">https://www. nguoiduatin .vn/tinmoi/bi-quang-hai-tuyet-tinh-dut-bo-huynh-anh-van-tan-luc-niu-keo-dau-vet-voi-gia-dinh-ban-trai-cu-011561967.html</p>
+                </div>
+                <div class=" bg-gray-200 mt-8 pl-4 pt-4 pb-5">
+                    <span class="text-xs font-bold text-white px-1 py-1 bg-red-600">SỰ KIỆN</span>
+                    <h1 class="font-bold text-2xl leading-8 mt-2 hover:text-blue-600"><a href="">Giá vàng hôm nay</a></h1>
+                    <div class="grid grid-cols-5 gap-5 mt-3">
+                        <div class="col-span-2">
+                            <a href=""><img src="https://media.tinmoi.vn/resize_354x213/upload/honghoavideo/2020/11/06/dong-thai-moi-nhat-cua-co-gai-to-ban-gai-cu-quang-hai-la-tuesday1604667759.jpg" alt=""></a>
+                            <a href=""><p class="font-bold text-sm hover:text-blue-600 leading-5 mt-2">Động thái mới nhất của cô gái tố bạn gái cũ Quang Hải là 'Tuesday'</p></a>
+                            <p class="text-sm mt-2 leading-6 pr-5">Sau 4 ngày đăng bài tố Huỳnh Anh, bạn gái cũ Quang Hải là người khiến cô phải chia tay bạn trai tên Q., ít phút trước, tài khoản H.T.Q. tiếp tục gây chú ý khi có động thái mới trên Facebook.</p>
+                        </div>
+                        <div class="col-span-3">
+                            <div class="goldPrice">
+                                <a href=""><img src="https://media.tinmoi.vn/resize_180x108/upload/thanhdat/2020/11/04/xon-xao-hinh-anh-quang-hai-dang-tai-cam-on-em-da-cho-anh-cao-them-20cm-hau-quay-xe-voi-huynh-anh1604461155.jpg" alt=""></a>
+                                <a href=""><p class="text-sm hover:text-blue-600 pl-2 pr-4 font-medium">Xôn xao hình ảnh Quang Hải đăng tải: 'Cảm ơn em đã cho anh cao thêm 20cm' hậu 'quay xe' với Huỳnh Anh</p></a>
+                            </div>
+                            <div class="goldPrice mt-4">
+                                <a href=""><img src="https://media.tinmoi.vn/resize_180x108/upload/honghoavideo/2020/11/04/duy-manh-lai-bi-dan-mang-hoi-kho-vu-quang-hai-gap-huynh-anh-o-dam-cuoi1604453695.jpg" alt=""></a>
+                                <a href=""><p class="text-sm hover:text-blue-600 pl-2 pr-4 font-medium">Duy Mạnh lại bị dân mạng hỏi khó vụ Quang Hải gặp Huỳnh Anh ở đám cưới</p></a>
+                            </div>
+                            <div class="goldPrice mt-4">
+                                <a href=""><img src="https://media.tinmoi.vn/resize_180x108/upload/thanhxuanbtv/2020/11/03/dong-thai-moi-nhat-cua-quang-hai-sau-khi-huynh-anh-dinh-phot-tieu-tam1604407899.jpg" alt=""></a>
+                                <a href=""><p class="text-sm hover:text-blue-600 pl-2 pr-4 font-medium">Động thái mới nhất của Quang Hải sau khi Huỳnh Anh 'dính phốt tiểu tam'</p></a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="mt-6 pb-12">
+                    <h4 class="font-bold text-base text-blue-900">Bạn có thể quan tâm</h4>
+                    <div class=" item-content2 grid grid-cols-8 gap-5 mt-4">
+                        <div class="col-span-3">
+                            <a href=""><img src="https://media.tinmoi.vn/resize_354x213/upload/ngocvan/2020/10/29/thang-11-sea-games-31-se-dien-ra-nhung-den-gio-btc-van-chua-chon-duoc-bai-hat-chinh-thuc1603955494.png" alt="" style="height: 160px; width: 100%;"></a>
+                        </div>
+                        <div class="col-span-5">
+                            <p class="text-xs">29-10-2020 14:17</p>
+                            <h4 class="font-bold text-xl leading-7 mt-1 hover:text-blue-600 "><a href="">Tháng 11, SEA Games 31 sẽ diễn ra nhưng đến giờ BTC vẫn chưa chọn được bài hát chính thức</a></h4>
+                            <p class="text-sm mt-2">Bài hát chính thức cho SEA Games 31 cần có giai điệu, ca từ dễ nhớ, dễ thuộc, mang ý nghĩa và quảng bá được hình ảnh nước chủ nhà Việt Nam.</p>
+                        </div>  
+                    </div>
+                    <div class=" item-content2 grid grid-cols-8 gap-5 mt-12">
+                        <div class="col-span-3">
+                            <a href=""><img src="https://media.tinmoi.vn/resize_354x213/upload/hatrangfb/2020/10/27/ban-gai-quang-hai-vua-mua-nha-moi-sau-khi-bi-lo-bi-mat-ve-cong-viec-giau-kin1603801578.jpg" alt="" style="height: 150px; width: 100%;"></a>
+                        </div>
+                        <div class="col-span-5">
+                            <p class="text-xs">27-10-2020 19:26</p>
+                            <h4 class="font-bold text-xl leading-7 mt-1 hover:text-blue-600 "><a href="">Bạn gái Quang Hải vừa mua nhà mới sau khi bị lộ bí mật về công việc giấu kín</a></h4>
+                            <p class="text-sm mt-2">Động thái mới đây của bạn gái Quang Hải thu hút sự chú ý của người hâm mộ.</p>
+                        </div>  
+                    </div>
+                    <div class=" item-content2 grid grid-cols-8 gap-5 mt-12">
+                        <div class="col-span-3">
+                            <a href=""><img src="https://media.tinmoi.vn/resize_354x213/upload/thanhdat/2020/10/21/doan-van-hau-tau-xe-mercedes-tien-ty-dan-mang-duoc-dip-ca-khia-dung-ra-ho-tay-nhun-nhay-nhe1603256124.jpg" alt="" style="height: 160px; width: 100%;"></a>
+                        </div>
+                        <div class="col-span-5">
+                            <p class="text-xs">21-10-2020 11:55</p>
+                            <h4 class="font-bold text-xl leading-7 mt-1 hover:text-blue-600 "><a href="">Đoàn Văn Hậu tậu xe Mercedes tiền tỷ, dân mạng được dịp cà khịa: 'Đừng ra Hồ Tây nhún nhảy nhé'</a></h4>
+                            <p class="text-sm mt-2">Giống như những người đàn anh như Quang Hải, Duy Mạnh... Đoàn Văn Hậu cũng chọn thương hiệu ô tô của Mercedes Benz. Ngay lập tức dân mạng đã vào 'cà khịa' tuyển thủ gốc Thái Bình.</p>
+                        </div>  
+                    </div>
+                </div>
+                <div class="border-l border-b border-r border-gray-400">
+                    <a href=""><img class="w-full h-full" src="./images/32.jpg" alt=""></a>
+                </div>
+            </div>
+            <class class="col-span-1">
+                <div>
+                    <h4 class="font-bold text-base text-blue-800 ">Đọc nhiều</h4>
+                    <div class="mostViewer mt-5">
+                        <a class="mt-1" href=""><img src="./images/24.jpg" alt="" style="width: 130px; height: 80px;" ></a>
+                        <a href="">
+                            <p class="text-sm hover:text-blue-600 ml-3 font-medium">
+                                Tin giải trí hot nhất trưa 5/11: Rộ tin Thủy Tiên bị trả lại tiền từ thiện, Ninh Dương Lan Ngọc nức nở tiết lộ bệnh tình
+                            </p>
+                        </a>
+                    </div>
+                    <div class="mostViewer mt-5">
+                        <a href=""><img src="./images/25.jpg" alt="" style="width: 130px; height: 80px;" ></a>
+                        <a href="">
+                            <p class="text-sm hover:text-blue-600 ml-3 font-medium">
+                                Con gái Minh Nhựa lại dùng cách ‘rẻ tiền’ bất ngờ để hồi dáng cấp tốc sau 7 tháng sinh con
+                            </p>
+                        </a>
+                    </div>
+                    <div class="mostViewer mt-8">
+                        <a class="mt-2" href=""><img src="./images/26.jpg" alt="" style="width: 130px; height: 80px;" ></a>
+                        <a href="">
+                            <p class="text-sm hover:text-blue-600 ml-3 font-medium">
+                                Tin giải trí hot nhất trưa 6/11: Hương Giang phát ngôn giữa làn sóng tẩy chay, Thủy Tiên bị fan chặn không cho đi làm từ thiện
+                            </p>
+                        </a>
+                    </div>
+                    <div class="mostViewer mt-5">
+                        <a href=""><img src="./images/27.jpg" alt="" style="width: 130px; height: 80px;" ></a>
+                        <a href="">
+                            <p class="text-sm hover:text-blue-600 ml-3 font-medium">
+                                Cách để HLV phòng gym ‘dởm’ kết nối học viên: Nữ báo giá gây sốc, nam chụp lén
+                            </p>
+                        </a>
+                    </div>
+                    <div class="mostViewer mt-8">
+                        <a class="mt-1" href=""><img src="./images/28.jpg" alt="" style="width: 130px; height: 80px;" ></a>
+                        <a href="">
+                            <p class="text-sm hover:text-blue-600 ml-3 font-medium">
+                                Tin tức thế giới 24h ngày 6/11: Chiến dịch tranh cử của Trump bị điều tra, Số ca Covid-19 tại Mỹ cao kỷ lục
+                            </p>
+                        </a>
+                    </div>
+                </div>
+                <div class="overflow-hidden mt-6">
+                    <a href=""><img class="transition duration-300 ease-in-out transform hover:scale-105" src="https://media.kenhhot.vn/image/2020/11/10/nga_co_vaccine_covid_19_tao_suc_ep_chay_dua_cho_tong_thong_my_trump_04_051709_28_57_000000.jpg" alt=""></a>
+                </div>
+                <div class="mt-5">
+                    <a class="font-bold text-sm hover:text-orange-600" href=""><p>Tổng thống Trump: Đừng mơ có vaccine Covid-19 nếu Biden làm Tổng thống</p></a>
+                    <hr class="my-2">
+                    <a class="font-bold text-sm hover:text-orange-600" href=""><p>Bầu cử Tổng thống Mỹ: Bộ trưởng Tư Pháp lệnh điều tra gian lận bầu cử </p></a>
+                    <hr class="my-2">
+                    <a class="font-bold text-sm hover:text-orange-600" href=""><p>Vụ xác chết không đầu ở chung cư quận 7: Lìa đầu do va chạm với ống thông gió </p></a>
+                </div>
+                <div class="mt-12" style="margin-top: 50px;">
+                    <a href=""><h4 class="font-bold text-base text-blue-800">Tin Mới Nhất</h4></a>
+                    <a href=""><p class="text-sm text-blue-900 hover:text-blue-700 my-2 mt-6">Tin tức trong ngày</p></a>
+                    <a href=""><p class="text-sm text-blue-900 hover:text-blue-700 my-2 mt-4">Tin nóng nhất</p></a>
+                    <a href=""><p class="text-sm text-blue-900 hover:text-blue-700 my-2 mt-4">Tin tức 24h</p></a>
+                </div>
+                <div id="stickyy" class="sticky " style="margin-top: 100px; top: 50px;">
+                    <a  href=""><img class="w-full h-full" src="./images/29.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="content2 container mx-auto mt-5">
+            <h4 class="font-bold text-base text-blue-900">Cùng chuyên mục</h4>
+            <div class="grid grid-cols-4 gap-x-5 gap-y-6 mt-5">
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/hatrangfb/2020/10/21/bui-tien-dung-khoe-loat-anh-hanh-phuc-ben-ba-xa-cung-con-gai-hau-on-ao-nghi-ran-nut-hon-nhan1603279861.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Bùi Tiến Dũng khoe loạt ảnh hạnh phúc bên bà xã cùng con gái hậu ồn ào nghi rạn nứt hôn nhân</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/thanhdat/2020/10/13/cristiano-ronaldo-duong-tinh-voi-covid-191602600594.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Cristiano Ronaldo dương tính với COVID-19</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/hatrangfb/2020/10/12/ban-gai-quang-hai-bi-lo-nhan-sac-that-da-san-sui-khong-giong-anh-da-chinh-sua1602487606.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Bạn gái Quang Hải bị lộ nhan sắc thật: Da sần sùi không giống ảnh đã chỉnh sửa</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/thanhdat/2020/10/07/tin-tuc-the-thao-7-10-cong-phuong-gap-han-lon-tuyen-thu-lam-xau-hinh-anh-bong-da-nu-viet-nam1602069470.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Tin tức thể thao 7/10: Công Phượng gặp hạn lớn, tuyển thủ làm xấu hình ảnh bóng đá nữ Việt Nam</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/hatrangfb/2020/10/03/doan-van-hau-nghi-van-hen-ho-cung-my-nhan-thi-hoa-hau-hoan-vu-20201601710352.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Đoàn Văn Hậu nghi vấn hẹn hò cùng mỹ nhân thi hoa hậu hoàn vũ 2020</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/vutien/2020/10/02/doi-truong-armenia-dung-bong-da-de-ra-tran-chien-dau1601628843.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Đội trưởng tuyển Armenia dừng bóng đá... để ra trận chiến đấu</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/vutien/2020/10/02/lukaku-gui-thong-diep-day-tinh-cam-toi-rashford1601623697.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Lukaku gửi thông điệp đầy tình cảm tới Rashford</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/vutien/2020/10/02/tin-bong-da-2-10-mu-chia-tay-cau-thu-thu-5-liverpool-len-gia-ban-nguoi-thua1601615294.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Tin bóng đá 2/10: MU chia tay cầu thủ thứ 5, Liverpool lên giá bán 'người thừa'</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/vutien/2020/10/02/lien-tuc-thung-luoi-bui-tien-dung-tien-sat-thanh-tich-khong-mong-muon1601609931.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Liên tục thủng lưới, Bùi Tiến Dũng tiến sát thành tích không mong muốn</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/vutien/2020/10/02/gianh-ve-choi-vong-bang-europa-league-filip-nguyen-sap-di-vao-lich-su-bong-da-viet1601606646.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Giành vé chơi vòng bảng Europa League, Filip Nguyễn sắp đi vào lịch sử bóng đá Việt</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/vutien/2020/10/02/nhat-linh-gap-tinh-huong-do-khoc-do-cuoi-trong-dem-trung-thu1601601783.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Nhật Linh - vợ tiền vệ Văn Đức gặp tình huống 'dở khóc dở cười' trong đêm Trung thu</a></h2> 
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="">
+                            <img class="w-full " src="https://media.tinmoi.vn/resize_354x213/upload/vutien/2020/10/02/ket-qua-boc-tham-champions-leaggue-ronaldo-dau-messi-mu-vao-bang-tu-than1601572171.jpg" alt=""
+                            style="height: 145px;">
+                        </a>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-base hover:text-blue-600 mt-1"><a href="">Kết quả bốc thăm Champions Leaggue: Ronaldo đấu Messi, MU vào bảng tử thần</a></h2> 
+                    </div>
+                </article>
+            </div>
+            <div class="text-center">
+                <button class="bg-blue-800 py-2 rounded-full text-white mt-10 hover:bg-blue-900 text-sm" style="width: 170px;">Xem tất cả</button>
+            </div>
+        </div>
+        <footer class="container mx-auto mt-10 mb-3">
+            <nav>
+                <ul class="flex justify-items-stretch text-sm font-bold">
+                    <li class="px-1 text-blue-900"><a href=""><i class="fas fa-home"></i></a></li>
+                    <li class="px-3 text-blue-900"><a href="">Thể Thao</a></li>
+                    <li class="px-3 text-blue-900"><a href="">Giải Trí</a></li>
+                    <li class="px-3 text-blue-900"><a href="">Pháp Luật</a></li>
+                    <li class="px-3 text-blue-900"><a href="">Đời Sống</a></li>
+                    <li class="px-3 text-blue-900"><a href="">Kinh Tế</a></li>
+                    <li class="px-3 text-blue-900"><a href="">Giáo Dục</a></li>
+                    <li class="px-3 text-blue-900"><a href="">Công Nghệ</a></li>
+                    <li class="px-3 text-blue-900"><a href="">Ôtô - Xe máy</a></li>
+                    <li class="px-3 text-blue-900"><a href="">Video</a></li>
+                    <li class="px-3 text-blue-900"><a href="">RSS News</a></li>
+                </ul>
+            </nav>
+            <div class="grid grid-cols-6 mt-8 gap-8">
+                <div class="col-span-1">
+                    <a href=""><img src="https://www.tinmoi.vn/responsive/static/assets/img/tinmoi_logo_primary.svg" alt=""></a>
+                    <div class="mt-8">
+                        <a href=""><i class="fab fa-facebook-f text-blue-900 px-4 py-3 bg-gray-300 rounded-full hover:bg-blue-700"></i></a>
+                        <a class="mx-1" href=""><i class="fab fa-youtube text-blue-900 px-3 py-3 bg-gray-300 rounded-full hover:bg-blue-700"></i></a>
+                        <a href=""><i class="fas fa-rss text-blue-900  bg-gray-300 rounded-full hover:bg-blue-700" style="padding: 12px 13px;"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-5 text-xs leading-5 ml-6">
+                    <p>Tinmoi.vn là trang thông tin điện tử của Công ty Cổ phần Truyền Thông Trực Tuyến Netlink.</p>
+                    <p>Người chịu trách nhiệm nội dung: Trần Thị Huế.</p>
+                    <p>ĐT: +84-243-5586999; Email: tinmoi@netlink.vn.</p>
+                    <p>Địa chỉ trụ sở: Tầng 04, Tòa nhà Star, Lô D32 KĐT Cầu Giấy, Đường Dương Đình Nghệ, Yên Hòa, Cầu Giấy, Hà Nội.</p>
+                    <p>Giấy phép số 4540/GP-TTĐT do Sở Thông tin và Truyền thông Hà Nội cấp.</p>
+                    <p>Liên hệ quảng cáo: 0933886969 - Email: thuan.trinh@netlink.vn.</p>
+                </div>
+            </div>
+            <nav class="mt-3">
+                <ul class="flex justify-items-stretch text-sm font-bold">
+                    <li class="px-1 text-black">Đối tác: </li>
+                    <li class="px-4 text-blue-900"><a href="">Báo VTC News</a></li>
+                    <li class="px-4 text-blue-900"><a href="">Techz.vn</a></li>
+                    <li class="px-4 text-blue-900"><a href="">Ngôi Sao</a></li>
+                    <li class="px-4 text-blue-900"><a href="">Báo Giao Thông</a></li>
+                    <li class="px-4 text-blue-900"><a href="">Báo Pháp Luật</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="container mx-auto mt-6">
+                <hr>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+                <div>
+                    <p class="text-xs">© Bản quyền thuộc về Tinmoi.vn</p>
+                </div>
+                <nav class="ml-72">
+                    <ul class="flex text-xs">
+                        <li class="px-2 hover:text-blue-700"><a href="">Giới thiệu</a></li>
+                        <li class="px-2 hover:text-blue-700"><a href="">Liên hệ</a></li>
+                        <li class="px-2 hover:text-blue-700"><a href="">Chính sách bảo mật</a></li>
+                        <li class="px-2 hover:text-blue-700"><a href="">Điều khoản sử dụng</a></li>
+                    </ul>
+                </nav>
+                <a href=""><img src="https://images.dmca.com/Badges/dmca-badge-w200-5x1-07.png?ID=7bd6afe9-c9de-447f-9e7b-ba978f0264ba" alt=""></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    // var navbar = document.getElementById("navbar");
+    // window.addEventListener("scroll", function(){
+    //     navbar.classList.toggle("sticky", window.scrollY > 0);
+    // });
+    
+    var btnSearch = document.getElementById("btnSearch");
+    var search = document.getElementById("search");
+    btnSearch.addEventListener("click", function(){
+        search.classList.toggle('hidden');
+    });
+
+    var stickyy = document.getElementById("stickyy");
+    window.addEventListener("scroll", function(){
+        stickyy.style.marginTop = "50px";
+    })
+
+</script>
+</html>
